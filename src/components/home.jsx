@@ -15,7 +15,7 @@ class Home extends Component {
 
   handleChange = e => {
     this.setState({ entry: e.target.value });
-    // console.log(this.state.entry);
+    console.log(this.state.entry);
   };
 
   handleSubmit = e => {
