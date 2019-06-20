@@ -7,8 +7,8 @@ class Home extends Component {
   state = {
     entry: "",
     data: [
-      { id: 1, amount: "230" },
-      { id: 2, amount: "410" },
+      { id: 1, amount: "100" },
+      { id: 2, amount: "200" },
       { id: 3, amount: "300" }
     ]
   };
@@ -29,7 +29,6 @@ class Home extends Component {
     this.setState({ data: data });
     console.log(e);
     document.getElementById("input-ass").value = "";
-    // this.refs.entry.value = "";
   };
 
   render() {

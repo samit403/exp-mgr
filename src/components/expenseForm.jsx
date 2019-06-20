@@ -5,9 +5,9 @@ class ExpenseForm extends Component {
   render() {
     // console.log(this.props);
     return (
-      <div className="content m-5">
+      <div className="content m-4">
         <form onSubmit={this.props.onSubmit}>
-          <div className="row form-group">
+          <div className="row">
             <div className="col-5">
               <label htmlFor="">Expense Amount</label>
               <input
@@ -18,20 +18,8 @@ class ExpenseForm extends Component {
                 onChange={this.props.onChange}
               />
             </div>
-            {/* <div className="col-5">
-              <label htmlFor="">Category</label>
-              <input type="text" className="form-control" />
-            </div>
-            <div className="col-5 mt-4">
-              <label htmlFor="">Description</label>
-              <input type="text" className="form-control" />
-            </div>
-            <div className="col-5 mt-4">
-              <label htmlFor="">Date</label>
-              <input type="date" className="form-control" />
-            </div> */}
-            <div className="col-5 mt-4">
-              <button className="btn btn-primary">Submit</button>
+            <div className="col-5">
+              <button className="btn btn-primary mt-4">Submit</button>
             </div>
           </div>
         </form>
