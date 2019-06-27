@@ -5,8 +5,8 @@ class ExpenseList extends Component {
     // console.log(this.props);
     return (
       <div className="content">
-        <h4 className="content ml-5">Expense List</h4>
-        <ul className="m-4">
+        <h4 className="content ml-2">Expense List</h4>
+        <ul className="m-1">
           {this.props.data.map(item => (
             <li key={item.id}>
               Expense for: <b>{item.desc}</b> amounts to:{" "}
