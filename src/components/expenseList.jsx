@@ -9,8 +9,8 @@ class ExpenseList extends Component {
         <ul className="m-1">
           {this.props.data.map(item => (
             <li key={item.id}>
-              Expense for: <b>{item.desc}</b> amounts to:{" "}
-              <b>Rs. {item.amount}</b>
+              Expense for: <b>{item.desc}</b> under <b>{item.cat}</b> amounts
+              to: <b>Rs. {item.amount}</b>
             </li>
           ))}
         </ul>

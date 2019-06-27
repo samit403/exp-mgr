@@ -1,32 +1,49 @@
 import React, { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.css";
 
 class ExpenseForm extends Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <div className="content m-4">
         <form onSubmit={this.props.onSubmit}>
           <div className="row">
-            <div className="col-5">
+            <div className="col-2">
+              <label htmlFor="descriptionEntry">Expense Category</label>
+              <select
+                name="categoryInput"
+                value={this.props.cat}
+                className="form-control form-control"
+                onChange={this.props.onChange}
+              >
+                <option value={this.props.categories[0]}>Select</option>
+                <option value={this.props.categories[1]}>Food / Outing </option>
+                <option value={this.props.categories[2]}>Groceries</option>
+                <option value={this.props.categories[3]}>Rent</option>
+                <option value={this.props.categories[4]}>Transportation</option>
+                <option value={this.props.categories[5]}>Recreational</option>
+                <option value={this.props.categories[6]}>Loan EMI</option>
+              </select>
+            </div>
+            <div className="col-4">
               <label htmlFor="amountEntry">Expense Amount</label>
               <input
-                id="amountEntry"
                 name="amountEntry"
                 type="number"
                 className="form-control"
-                value={this.props.amountEntry}
+                placeholder="Enter Amount"
+                value={this.props.amount}
                 onChange={this.props.onChange}
               />
             </div>
-            <div className="col-5">
+            <div className="col-4">
               <label htmlFor="descriptionEntry">Expense Description</label>
               <input
-                id="descriptionEntry"
                 name="descriptionEntry"
                 type="text"
                 className="form-control"
-                value={this.props.descriptionEntry}
+                placeholder="Enter Description"
+                value={this.props.desc}
                 onChange={this.props.onChange}
               />
             </div>
