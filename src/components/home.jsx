@@ -29,7 +29,10 @@ class Home extends Component {
     //setting the state to the data entered in the input field
     this.setState({ data });
     //resetting the value of the input
+    this.handleClearForm();
+  };
 
+  handleClearForm = () => {
     document.getElementById("amountEntry").value = "";
     document.getElementById("descriptionEntry").value = "";
   };
