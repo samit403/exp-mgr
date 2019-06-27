@@ -7,28 +7,28 @@ class Home extends Component {
   state = {
     entry: "",
     data: [
-      { id: 1, amount: "100" },
-      { id: 2, amount: "200" },
-      { id: 3, amount: "300" }
+      { id: 1, amount: "120", desc: "Apples" },
+      { id: 2, amount: "2100", desc: "Dining" },
+      { id: 3, amount: "500", desc: "Petrol Refill" }
     ]
   };
 
   handleChange = e => {
     this.setState({ entry: e.target.value });
-    console.log(this.state.entry);
+    // console.log(this.state.entry);
   };
 
   handleSubmit = e => {
     e.preventDefault();
+    //feeding the data from the input field
     let amount = this.state.entry;
     const id = this.state.data.length + 1;
     const newItem = { id, amount };
-
     const data = this.state.data.concat(newItem);
-
-    this.setState({ data: data });
-    console.log(e);
-    document.getElementById("input-ass").value = "";
+    //setting the state to the data entered in the input field
+    this.setState({ data });
+    //resetting the value of the input
+    document.getElementById("expense-amount").value = "";
   };
 
   render() {
