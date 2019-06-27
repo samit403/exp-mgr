@@ -1,17 +1,20 @@
 import React, { Component } from "react";
+import ListItem from "./common/listItem";
 
 class ExpenseList extends Component {
   render() {
     // console.log(this.props);
     return (
       <div className="content">
-        <h4 className="content ml-2">Expense List</h4>
-        <ul className="m-1">
+        <h4 className="content">Expense List</h4>
+        <ul className="list-group m-1">
           {this.props.data.map(item => (
-            <li key={item.id}>
-              Expense for: <b>{item.desc}</b> under <b>{item.cat}</b> amounts
-              to: <b>Rs. {item.amount}</b>
-            </li>
+            <ListItem
+              key={item.id}
+              amount={item.amount}
+              desc={item.desc}
+              cat={item.cat}
+            />
           ))}
         </ul>
       </div>
