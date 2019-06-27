@@ -5,7 +5,8 @@ import ExpenseList from "./expenseList";
 
 class Home extends Component {
   state = {
-    entry: "",
+    amountEntry: "",
+    descriptionEntry: "",
     data: [
       { id: 1, amount: "120", desc: "Apples" },
       { id: 2, amount: "2100", desc: "Dining" },
@@ -14,21 +15,24 @@ class Home extends Component {
   };
 
   handleChange = e => {
-    this.setState({ entry: e.target.value });
-    // console.log(this.state.entry);
+    this.setState({ [e.target.name]: e.target.value });
+    // console.log(this.state.amountEntry);
   };
 
   handleSubmit = e => {
     e.preventDefault();
     //feeding the data from the input field
-    let amount = this.state.entry;
+    let amount = this.state.amountEntry;
+    let desc = this.state.descriptionEntry;
     const id = this.state.data.length + 1;
-    const newItem = { id, amount };
+    const newItem = { id, amount, desc };
     const data = this.state.data.concat(newItem);
     //setting the state to the data entered in the input field
     this.setState({ data });
     //resetting the value of the input
-    document.getElementById("expense-amount").value = "";
+
+    document.getElementById("amountEntry").value = "";
+    document.getElementById("descriptionEntry").value = "";
   };
 
   render() {
@@ -36,7 +40,8 @@ class Home extends Component {
       <div className="container">
         <NavBar />
         <ExpenseForm
-          amount={this.state.entry}
+          amount={this.state.amountEntry}
+          desc={this.state.descriptionEntry}
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />

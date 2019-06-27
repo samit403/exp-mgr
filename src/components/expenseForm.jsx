@@ -11,8 +11,9 @@ class ExpenseForm extends Component {
             <div className="col-5">
               <label htmlFor="">Expense Amount</label>
               <input
-                id="expense-amount"
-                type="text"
+                id="amountEntry"
+                name="amountEntry"
+                type="number"
                 className="form-control"
                 value={this.props.entry}
                 onChange={this.props.onChange}
@@ -21,7 +22,8 @@ class ExpenseForm extends Component {
             <div className="col-5">
               <label htmlFor="">Expense Description</label>
               <input
-                id="expense-description"
+                id="descriptionEntry"
+                name="descriptionEntry"
                 type="text"
                 className="form-control"
                 value={this.props.entry}
