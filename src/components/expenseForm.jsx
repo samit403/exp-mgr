@@ -16,13 +16,27 @@ class ExpenseForm extends Component {
                 className="form-control form-control"
                 onChange={this.props.onChange}
               >
-                <option value={this.props.categories[0]}>Select</option>
-                <option value={this.props.categories[1]}>Food / Outing </option>
-                <option value={this.props.categories[2]}>Groceries</option>
-                <option value={this.props.categories[3]}>Rent</option>
-                <option value={this.props.categories[4]}>Transportation</option>
-                <option value={this.props.categories[5]}>Recreational</option>
-                <option value={this.props.categories[6]}>Loan EMI</option>
+                <option value={this.props.categories[0]}>
+                  {this.props.categories[0]}
+                </option>
+                <option value={this.props.categories[1]}>
+                  {this.props.categories[1]}{" "}
+                </option>
+                <option value={this.props.categories[2]}>
+                  {this.props.categories[2]}
+                </option>
+                <option value={this.props.categories[3]}>
+                  {this.props.categories[3]}
+                </option>
+                <option value={this.props.categories[4]}>
+                  {this.props.categories[4]}
+                </option>
+                <option value={this.props.categories[5]}>
+                  {this.props.categories[5]}
+                </option>
+                <option value={this.props.categories[6]}>
+                  {this.props.categories[6]}
+                </option>
               </select>
             </div>
             <div className="col-4">

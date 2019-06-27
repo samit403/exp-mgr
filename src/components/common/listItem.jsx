@@ -12,6 +12,9 @@ class ListItem extends Component {
             Expense for: <b>{this.props.desc} </b> | Amount spent:
             <b> ₹ {this.props.amount}</b>
           </div>
+          <div className="col justify-content-end">
+            <button className="btn btn-sm btn-outline-danger ">Delete</button>
+          </div>
         </div>
       </li>
     );

@@ -10,17 +10,17 @@ class Home extends Component {
     descriptionEntry: "",
     categories: [
       "Select",
-      "Food / Outing",
-      "Groceries",
+      "Food",
+      "Grocery",
       "Rent",
-      "Transportation",
-      "Recreational",
+      "Transport",
+      "Recreation",
       "Loan EMI"
     ],
     data: [
-      { id: 1, cat: "Groceries", amount: "120", desc: "Apples" },
-      { id: 2, cat: "Food / Outing", amount: "2100", desc: "Dining" },
-      { id: 3, cat: "Transportation", amount: "500", desc: "Petrol Refill" }
+      { id: 1, cat: "Grocery", amount: "120", desc: "Apples" },
+      { id: 2, cat: "Food", amount: "2100", desc: "Dining" },
+      { id: 3, cat: "Transport", amount: "500", desc: "Petrol Refill" }
     ]
   };
 
