@@ -14,6 +14,7 @@ class ExpenseList extends Component {
               amount={item.amount}
               desc={item.desc}
               cat={item.cat}
+              onDelete={() => this.props.onDelete(item)}
             />
           ))}
         </ul>

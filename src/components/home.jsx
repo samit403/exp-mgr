@@ -20,7 +20,8 @@ class Home extends Component {
     data: [
       { id: 1, cat: "Grocery", amount: "120", desc: "Apples" },
       { id: 2, cat: "Food", amount: "2100", desc: "Dining" },
-      { id: 3, cat: "Transport", amount: "500", desc: "Petrol Refill" }
+      { id: 3, cat: "Transport", amount: "500", desc: "Petrol Refill" },
+      { id: 4, cat: "Recreation", amount: "300", desc: "Milds" }
     ]
   };
 
@@ -48,6 +49,12 @@ class Home extends Component {
     });
   };
 
+  handeDelete = item => {
+    console.log(item);
+    const data = this.state.data.filter(i => i.id !== item.id);
+    this.setState({ data });
+  };
+
   render() {
     return (
       <div className="container">
@@ -60,7 +67,7 @@ class Home extends Component {
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />
-        <ExpenseList data={this.state.data} />
+        <ExpenseList data={this.state.data} onDelete={this.handeDelete} />
       </div>
     );
   }
